@@ -10,7 +10,7 @@ function Home() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/introduction" element={<Introduction />} />
+        <Route path="/" element={<Introduction />} />
         <Route path="/array" element={<Array />} />
         <Route path="/array/arraymethod" element={<ArrayMethod />} />
       </Routes>

@@ -13,8 +13,8 @@ function ArrayMethod() {
         <p>How to pass an Array in Method</p>
         <p><b>For Example:</b></p>
         <div className="image">
-            <img src={ArrayMethod1} alt="" />
-            <img src ={ArrayMethod2} />
+            <img src={ArrayMethod1} alt="ArrayMethodExample" />
+            <img src ={ArrayMethod2} alt='ArrayMethodExample' />
         </div>
         
         <hr />

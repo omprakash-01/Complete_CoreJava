@@ -4,15 +4,13 @@ import { Link } from 'react-router-dom';
 
 function Introduction() {
   return (
-    <>
     <div className="container">
-      
-    <section className="Intro">
+      <section>
         <h1>#01 Introduction</h1>
         <p><strong>Language:</strong> Any medium to communicate is called language.</p>
         <p><strong>Programming language:</strong> A language that is used to communicate with a computer is called programming language</p>
       </section>
-      <section className="TypesOfLanguages">
+      <section>
         <h2>Types of Programming Languages:</h2>
         <ol className="list">
           <li>Low-level Programming Language (Binary Language).</li>
@@ -49,7 +47,7 @@ function Introduction() {
         <ul className="list">
           <li>High-level is a programming language made up of simple English characters such as (A-Z), (a-z), (0-9), and special symbols (@,#,-,+,&).</li>
           <li>High-level is a human-friendly language because it is very easy for humans to read and write a set of instructions with the help of such a language.</li>
-          <li>High-level is not a computer-friendly language, so a translator comes in between and is responsible for converting the high-level code into machine-understandable code.        </li>
+          <li>High-level is not a computer-friendly language, so a translator comes in between and is responsible for converting the high-level code into machine-understandable code.</li>
           <li><strong>Example:</strong>
             <ol>
               <li>C++</li>
@@ -59,8 +57,8 @@ function Introduction() {
           </li>
         </ul>
       </section>
-      <section className="Translator">
-        <table border="2px">
+      <section>
+        <table>
           <thead>
             <tr>
               <th>Compiler</th>
@@ -80,13 +78,10 @@ function Introduction() {
         </table>
       </section>
       <hr />
-
-        <div className="btn center">
-          <Link to="/array">Next Page</Link>
-        </div>
-      
+      <div className="btn center">
+        <Link to="/array">Next Page</Link>
+      </div>
     </div>
-    </>
   );
 }
 

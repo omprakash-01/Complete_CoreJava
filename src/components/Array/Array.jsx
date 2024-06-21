@@ -20,7 +20,7 @@ function Array() {
           <li>An Array is a linear data Structure.</li>
           <li>An Array is a collection of similar data type.</li>
           <li>
-            Arrays are stored at contiguous memory locations.{" "}
+            Arrays are stored at contiguous memory locations
             <strong>In java interanally may not be continuous.</strong>
           </li>
           <li>Array has fixed size.</li>
@@ -33,7 +33,7 @@ function Array() {
           <li> Array are mutable <strong>(means it will change original array)</strong> in java where
           String are imutable in java.</li>
         </ol>
-        <table border="2px">
+        <table>
           <thead>
             <th>Advantage of Java</th>
             <th>Disadvantage of Java</th>
@@ -76,7 +76,7 @@ function Array() {
         <h2>Array Syntax for initialization and declaration:-</h2>
         <h3>Method one:-</h3>
         <p>datatype [] variable_name=new datatype [size];</p>
-        <code>int [] rollNumber=new int [size];</code>{" "}
+        <code>int [] rollNumber=new int [size];</code>
         <span>new is a keyword used to create an object</span> <br />
         <code>float[] money=new float [size];</code> <br />
         <code>char [] alpha=new char [size];</code>
@@ -92,15 +92,15 @@ function Array() {
         </span>
         <h3>Method Two:-</h3>
         <div className="image">
-          <img src={ArrayDeclaration} alt="" className="img1" />
-          <img src={ArrayExample} alt="" className="img2" />
+          <img src={ArrayDeclaration} alt="ArrayExampleCode" />
+          <img src={ArrayExample} alt="ArrayExampleCode"  />
         </div>
         <hr />
         {/* Input and Priting Array */}
-        <div className="inputPrintingArray">
+        <div>
           <h2>Array Printing and taking Input :-</h2>
           <div className="image">
-            <img src={AccessingArray} alt="AccessingArray" className="img3"/>
+            <img src={AccessingArray} alt="AccessingArrayCode"/>
             <div class="output-wrapper">
 
             <div className="output">
@@ -110,7 +110,7 @@ function Array() {
             </div>
           </div>
           <div className="image">
-            <img src={AccessingArrayChar} alt="" className="img4"/>
+            <img src={AccessingArrayChar} alt="AccessingArrayCharCode"/>
             <div class="output-wrapper">
             <div className="output">
               <b>Output: </b> <code>a,B,Z,x,p</code>
@@ -118,17 +118,19 @@ function Array() {
             </div>
           </div>
           <div className="image">
-            <img src={ArrayInputSize} alt=""className="img5" />
-            <img src={ForEachLoop} alt="" className="img6" />
-            <img src={ArraystoString} alt=""  className="img7"/>
+            <img src={ArrayInputSize} alt="ArrayInputSizeCode" />
+            <img src={ForEachLoop} alt="ArrayForEachLoopCode" />
+            <img src={ArraystoString} alt="ArraystoStringCode" />
             <hr />
             <p className="exception">If try to access element in array above it size it will throw an error  <strong>ArrayIndextOutofBoundException.</strong></p>
-            <img src={ArrayException} alt=""  className="img8"/>
+            <div className="image">
+            <img src={ArrayException} alt="ArrayException" />
+            </div>
           </div>
         </div>
       <hr />
        <div className="image">
-       <img src={ArrayNoneElement} alt=""  className="img9"/>
+       <img src={ArrayNoneElement} alt="ArryNoneElementCode" />
        </div>
       <p>If you have initialized an array and do not insert any element in the
         array and you are tring to print element of array. It will show you 0
@@ -137,7 +139,7 @@ function Array() {
         <hr />
         <div className="btn-container">
           <div className='btn'>
-            <Link to="/introduction">Previous Page</Link>
+            <Link to="/">Previous Page</Link>
           </div>
           <div className='btn'>
             <Link to="arraymethod">Next Page</Link>
