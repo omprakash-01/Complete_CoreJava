@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Array.css";
 import ArrayDeclaration from "../../assets/Array/ArrayDeclaration.png";
 import AccessingArray from "../../assets/Array/AccessingArray.png";
@@ -10,8 +10,25 @@ import ArrayNoneElement from "../../assets/Array/ArrayNoneElement.png";
 import ForEachLoop from "../../assets/Array/ForEachLoop.png";
 import ArraystoString from "../../assets/Array/ArraystoString.png";
 import { Link } from 'react-router-dom';
+import ImageModal from '../ImageModal'; 
 
 function Array() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState('');
+
+  const openModal = (src) => {
+    setModalImageSrc(src);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const imgStyle = {
+    cursor: 'pointer',
+  };
+
   return (
     <>
       <div className="container">
@@ -35,12 +52,14 @@ function Array() {
         </ol>
         <table>
           <thead>
-            <th>Advantage of Java</th>
-            <th>Disadvantage of Java</th>
+            <tr>
+              <th>Advantage of Java</th>
+              <th>Disadvantage of Java</th>
+            </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Direct access to elements using index. </td>
+              <td>Direct access to elements using index.</td>
               <td>
                 Searching for specific elements can be slow if the array is
                 unsorted.
@@ -92,50 +111,48 @@ function Array() {
         </span>
         <h3>Method Two:-</h3>
         <div className="image">
-          <img src={ArrayDeclaration} alt="ArrayExampleCode" />
-          <img src={ArrayExample} alt="ArrayExampleCode"  />
+          <img src={ArrayDeclaration} alt="ArrayExampleCode" onClick={() => openModal(ArrayDeclaration)} style={imgStyle} />
+          <img src={ArrayExample} alt="ArrayExampleCode" onClick={() => openModal(ArrayExample)} style={imgStyle} />
         </div>
         <hr />
         {/* Input and Priting Array */}
         <div>
           <h2>Array Printing and taking Input :-</h2>
           <div className="image">
-            <img src={AccessingArray} alt="AccessingArrayCode"/>
-            <div class="output-wrapper">
-
-            <div className="output">
-              <b>Output:</b>
-              <code> 1,2,3,4,5</code>
-            </div>
-            </div>
-          </div>
-          <div className="image">
-            <img src={AccessingArrayChar} alt="AccessingArrayCharCode"/>
-            <div class="output-wrapper">
-            <div className="output">
-              <b>Output: </b> <code>a,B,Z,x,p</code>
-            </div>
+            <img src={AccessingArray} alt="AccessingArrayCode" onClick={() => openModal(AccessingArray)} style={imgStyle} />
+            <div className="output-wrapper">
+              <div className="output">
+                <b>Output:</b>
+                <code> 1,2,3,4,5</code>
+              </div>
             </div>
           </div>
           <div className="image">
-            <img src={ArrayInputSize} alt="ArrayInputSizeCode" />
-            <img src={ForEachLoop} alt="ArrayForEachLoopCode" />
-            <img src={ArraystoString} alt="ArraystoStringCode" />
+            <img src={AccessingArrayChar} alt="AccessingArrayCharCode" onClick={() => openModal(AccessingArrayChar)} style={imgStyle} />
+            <div className="output-wrapper">
+              <div className="output">
+                <b>Output: </b> <code>a,B,Z,x,p</code>
+              </div>
+            </div>
+          </div>
+          <div className="image">
+            <img src={ArrayInputSize} alt="ArrayInputSizeCode" onClick={() => openModal(ArrayInputSize)} style={imgStyle} />
+            <img src={ForEachLoop} alt="ArrayForEachLoopCode" onClick={() => openModal(ForEachLoop)} style={imgStyle} />
+            <img src={ArraystoString} alt="ArraystoStringCode" onClick={() => openModal(ArraystoString)} style={imgStyle} />
             <hr />
-            <p className="exception">If try to access element in array above it size it will throw an error  <strong>ArrayIndextOutofBoundException.</strong></p>
+            <p className="exception">If try to access element in array above its size it will throw an error  <strong>ArrayIndexOutOfBoundException.</strong></p>
             <div className="image">
-            <img src={ArrayException} alt="ArrayException" />
+              <img src={ArrayException} alt="ArrayException" onClick={() => openModal(ArrayException)} style={imgStyle} />
             </div>
           </div>
         </div>
-      <hr />
-       <div className="image">
-       <img src={ArrayNoneElement} alt="ArryNoneElementCode" />
-       </div>
-      <p>If you have initialized an array and do not insert any element in the
-        array and you are tring to print element of array. It will show you 0
-        for Int datatype, 0.0 for Float datatype, null for String datatype.</p>
-     
+        <hr />
+        <div className="image">
+          <img src={ArrayNoneElement} alt="ArryNoneElementCode" onClick={() => openModal(ArrayNoneElement)} style={imgStyle} />
+        </div>
+        <p>If you have initialized an array and do not insert any element in the
+          array and you are trying to print element of array. It will show you 0
+          for Int datatype, 0.0 for Float datatype, null for String datatype.</p>
         <hr />
         <div className="btn-container">
           <div className='btn'>
@@ -145,6 +162,7 @@ function Array() {
             <Link to="arraymethod">Next Page</Link>
           </div>
         </div>
+        <ImageModal isOpen={isModalOpen} src={modalImageSrc} onClose={closeModal} />
       </div>
     </>
   );

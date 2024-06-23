@@ -6,7 +6,7 @@ function Introduction() {
   return (
     <div className="container">
       <section>
-        <h1>#01 Introduction</h1>
+        <h1>#Introduction</h1>
         <p><strong>Language:</strong> Any medium to communicate is called language.</p>
         <p><strong>Programming language:</strong> A language that is used to communicate with a computer is called programming language</p>
       </section>
@@ -17,7 +17,7 @@ function Introduction() {
           <li>Assembly Language (Mid-level Language).</li>
           <li>High-level Programming Language.</li>
         </ol>
-        <h2>Low-level language:</h2>
+        <h3>Low-level language:</h3>
         <ul className="list">
           <li>The first programming language used to communicate with a computer is called low-level language.</li>
           <li>Low-level language is in the form of '0' and '1', so it is called binary language.</li>
@@ -32,7 +32,7 @@ function Introduction() {
             </ol>
           </li>
         </ul>
-        <h2>Assembly Language:</h2>
+        <h3>Assembly Language:</h3>
         <ul className="list">
           <li>Mid-level language is also known as assembly language.</li>
           <li>Mid-level language is used to fill the gap between human-friendly language and computer-friendly language.</li>
@@ -42,8 +42,8 @@ function Introduction() {
               <li>Byte code</li>
             </ol>
           </li>
-        </ul>
-        <h2>High-level language:</h2>
+        </ul>       
+        <h3>High-level language:</h3>
         <ul className="list">
           <li>High-level is a programming language made up of simple English characters such as (A-Z), (a-z), (0-9), and special symbols (@,#,-,+,&).</li>
           <li>High-level is a human-friendly language because it is very easy for humans to read and write a set of instructions with the help of such a language.</li>

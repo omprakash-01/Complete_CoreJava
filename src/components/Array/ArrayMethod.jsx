@@ -1,9 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ArrayMethod1 from '../../assets/Array/ArrayMethod1.png'
 import ArrayMethod2 from '../../assets/Array/ArrayMethod2.png'
 import { Link } from 'react-router-dom';
+import ImageModal from '../ImageModal'; 
 
 function ArrayMethod() {
+
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState('');
+
+  const openModal = (src) => {
+    setModalImageSrc(src);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const imgStyle = {
+    cursor: 'pointer',
+  };
+
   return (
     <>
     <div className="container">
@@ -13,8 +32,8 @@ function ArrayMethod() {
         <p>How to pass an Array in Method</p>
         <p><b>For Example:</b></p>
         <div className="image">
-            <img src={ArrayMethod1} alt="ArrayMethodExample" />
-            <img src ={ArrayMethod2} alt='ArrayMethodExample' />
+            <img src={ArrayMethod1} alt="ArrayMethodExample" onClick={()=>openModal(ArrayMethod1)} style={imgStyle} />
+            <img src ={ArrayMethod2} alt='ArrayMethodExample' onClick={()=> openModal(ArrayMethod2)} style={imgStyle} />
         </div>
         
         <hr />
@@ -27,6 +46,7 @@ function ArrayMethod() {
           </div>
         </div>
       </div>
+      <ImageModal isOpen={isModalOpen} src={modalImageSrc} onClose={closeModal} />
     </div>
       
     </>
