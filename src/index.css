@@ -115,9 +115,14 @@ th, td {
   background-color: #244a7d;
 }
 
-.list {
-  list-style-type: square;
+.unorder-list {
+  list-style-type: disc;
   margin-left: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.order-list{
+  margin-left: 20px;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .image img {
