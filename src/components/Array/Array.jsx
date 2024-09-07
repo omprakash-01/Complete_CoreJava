@@ -159,7 +159,7 @@ function Array() {
             <Link to="/">Previous Page</Link>
           </div>
           <div className='btn'>
-            <Link to="arraymethod">Next Page</Link>
+            <Link to="/array/arraymethod">Next Page</Link>
           </div>
         </div>
         <ImageModal isOpen={isModalOpen} src={modalImageSrc} onClose={closeModal} />

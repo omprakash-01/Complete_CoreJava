@@ -39,7 +39,7 @@ function ArrayMethod() {
         <hr />
         <div className="btn-container">
           <div className='btn'>
-            <Link to="/array">Previous Page</Link>
+            <Link to="/array/array">Previous Page</Link>
           </div>
           <div className='btn'>
             <Link to="">Next Page</Link>

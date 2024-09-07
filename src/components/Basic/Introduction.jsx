@@ -157,7 +157,7 @@ function Introduction() {
       </section>
       <hr />
       <div className="btn center">
-        <Link to="/array">Next Page</Link>
+        <Link to="/java/java">Next Page</Link>
       </div>
       <ImageModal isOpen={isModalOpen} src={modalImageSrc} onClose={closeModal} />
     </div>
